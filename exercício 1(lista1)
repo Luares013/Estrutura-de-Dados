@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+
+
+    struct Pessoa{
+        char Nome[50];
+        int Idade;
+        float Altura;
+    };
+    
+int main()
+{
+    struct Pessoa ID;
+    
+    printf(" --- Cadastro de Usuário ---\n\n");
+    
+    printf("Digite o nome da pessoa:\n");
+    scanf("%s", &ID.Nome);
+    
+    printf("Digite a idade da pessoa:\n");
+    scanf("%d", &ID.Idade);
+    
+    printf("Digite a Altura da pessoa (em metros):\n");
+    scanf("%f", &ID.Altura);
+    
+    printf(" ---Infromações do cadastro ---\n\n");
+    printf("nome :%s\n", ID.Nome);
+    printf("Idade: %d\n", ID.Idade);
+    printf("Altura: %f\n", ID.Altura);
+
+    return 0;
+}

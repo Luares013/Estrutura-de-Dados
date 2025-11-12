@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+struct Retangulo {
+    float base;
+    float altura;
+};
+
+
+float calcularArea(struct Retangulo r) {
+    return r.base * r.altura;
+}
+
+int main() {
+
+    struct Retangulo r;
+    float area;
+    
+    printf(" --- Vamos calcular a area do retangulo --- \n\n");
+    
+    printf("Digite a Base:");
+    scanf("%f", &r.base);
+
+    printf("Digite a Altura:");
+    scanf("%f", &r.altura);
+    
+    area = calcularArea(r);
+
+    printf("Area: %.2f\n", area);
+
+    return 0;
+}

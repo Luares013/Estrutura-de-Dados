@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+
+struct Data {
+    int dia;
+    int mes;
+    int ano;
+};
+
+int main() {
+
+    struct Data D;
+
+
+    printf("--- Vamos Ler Uma Data ---\n\n");
+    printf("Digite o dia (dd): \n");
+    scanf("%d", &D.dia);
+
+    printf("Digite o mes (mm): \n");
+    scanf("%d", &D.mes);
+
+    printf("Digite o ano (aaaa): \n");
+    scanf("%d", &D.ano);
+
+    printf("\n--- A Data Lida Foi  ---\n");
+    printf("A data lida foi: %02d/%02d/%04d\n", D.dia, D.mes, D.ano);
+
+    return 0;
+}

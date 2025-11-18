@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+    struct Produto{
+        char Nome[100];
+        float Preço;
+        float QtdEstoque;
+        
+    };
+    
+    float CalcularEstoque(struct Produto p){
+        return p.Preço * p.QtdEstoque;
+    }
+    
+int main(){
+    
+    struct Produto p;
+    float ValorTotal;
+    
+    printf(" --- Vamos ver o valor total que um produto possue em estoque ---\n\n");
+    
+    printf("Digite o nome do produto:\n");
+    scanf("%s", &p.Nome);
+    
+    printf("Digite o preço do produto:\n");
+    scanf("%f", &p.Preço);
+    
+    printf("Digite a quantidade desse produto em estoque:\n");
+    scanf("%f", &p.QtdEstoque);
+    
+    ValorTotal= CalcularEstoque(p);
+    
+    printf("Produto: %s \n", p.Nome);
+    printf("Preco unitario: R$ %.2f \n", p.Preço);
+    printf("Quantidade em estoque: %d\n", p.QtdEstoque);
+    printf("Valor total em estoque: R$ %.2f\n", ValorTotal);
+    
+    
+    return 0;
+}
